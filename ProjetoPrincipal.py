@@ -51,32 +51,36 @@ for i in range(n[9]):
     vetor10.append(random.randint(n[9]*-2, n[9]*2 + 1))
 
 
-a = []
-b = []
-soma = 0
-somab = 0
-for i in range(tamanho_random):
-    inicial = time.time()
-    insertionSort(vetor1)
-    final = time.time()
-    a.append(final-inicial)
+def tempo(vetor):
+    a = []
+    b = []
+    soma = 0
+    somab = 0
+    for i in range(tamanho_random):
+        inicial = time.time()
+        insertionSort(vetor)
+        final = time.time()
+        a.append(final-inicial)
 
-    inicial = time.time()
-    mergeSort(vetor1, 0, len(vetor1) -1)
-    final = time.time()
-    b.append(final - inicial)
+        inicial = time.time()
+        mergeSort(vetor, 0, len(vetor) -1)
+        final = time.time()
+        b.append(final - inicial)
 
-for i in range(len(a)):
-    soma += a[i]
-    somab += b[i]
+    for i in range(len(a)):
+        soma += a[i]
+        somab += b[i]
 
-media = soma / tamanho_random
-mediab = somab / tamanho_random
+        media = soma / tamanho_random
+        mediab = somab / tamanho_random
 
-print(f'Tamanho do vetor: {len(vetor1)}\n'
-      f'Media Insertion Sort: {media}')
+    print(f'Tamanho do vetor: {len(vetor)}\n'
+    f'Media Insertion Sort: {media}')
+    print('-'*30)
+    print(f'Tamanho do vetor: {len(vetor)}\n'
+    f'Media Merge Sort: {mediab}')
+
+tempo(vetor1)
 print('-'*30)
-print(f'Tamanho do vetor: {len(vetor1)}\n'
-      f'Media Merge Sort: {mediab}')
-
+tempo(vetor2)
 
