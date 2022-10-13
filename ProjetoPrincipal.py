@@ -2,53 +2,46 @@ import random
 from insertionsort import insertionsort
 from mergesort import mergesort
 import time
+import numpy as np
 
 n = []
 tamanho_random = random.randint(10, 21)
-vetor_auxiliar = []
-vetor1 = []
-vetor2 = []
-vetor3 = []
-vetor4 = []
-vetor5 = []
-vetor6 = []
-vetor7 = []
-vetor8 = []
-vetor9 = []
-vetor10 = []
+vetor = []
 
 for i in range(10):
+    vetor_aux = []
+    vetor.append(vetor_aux)
     n.append(random.randint(10, 10001))
 
 for i in range(n[0]):
-    vetor1.append(random.uniform(n[0]*-2, n[0]*2 + 1))
+    vetor[0].append(random.uniform(n[0]*-2, n[0]*2 + 1))
 
 for i in range(n[1]):
-    vetor2.append(random.uniform(n[1]*-2, n[1]*2 + 1))
+    vetor[1].append(random.uniform(n[1]*-2, n[1]*2 + 1))
 
 for i in range(n[2]):
-    vetor3.append(random.uniform(n[2]*-2, n[2]*2 + 1))
+    vetor[2].append(random.uniform(n[2]*-2, n[2]*2 + 1))
 
 for i in range(n[3]):
-    vetor4.append(random.uniform(n[3]*-2, n[3]*2 + 1))
+    vetor[3].append(random.uniform(n[3]*-2, n[3]*2 + 1))
 
 for i in range(n[4]):
-    vetor5.append(random.uniform(n[4]*-2, n[4]*2 + 1))
+    vetor[4].append(random.uniform(n[4]*-2, n[4]*2 + 1))
 
 for i in range(n[5]):
-    vetor6.append(random.uniform(n[5]*-2, n[5]*2 + 1))
+    vetor[5].append(random.uniform(n[5]*-2, n[5]*2 + 1))
 
 for i in range(n[6]):
-    vetor7.append(random.uniform(n[6]*-2, n[6]*2 + 1))
+    vetor[6].append(random.uniform(n[6]*-2, n[6]*2 + 1))
 
 for i in range(n[7]):
-    vetor8.append(random.uniform(n[7]*-2, n[7]*2 + 1))
+    vetor[7].append(random.uniform(n[7]*-2, n[7]*2 + 1))
 
 for i in range(n[8]):
-    vetor9.append(random.uniform(n[8]*-2, n[8]*2 + 1))
+    vetor[8].append(random.uniform(n[8]*-2, n[8]*2 + 1))
 
 for i in range(n[9]):
-    vetor10.append(random.uniform(n[9]*-2, n[9]*2 + 1))
+    vetor[9].append(random.uniform(n[9]*-2, n[9]*2 + 1))
 
 
 def tempo(vetor):
@@ -56,6 +49,8 @@ def tempo(vetor):
     b = []
     soma = 0
     somab = 0
+    media = 0
+    mediab = 0
     for i in range(tamanho_random):
         inicial = time.time()
         insertionsort(vetor)
@@ -81,7 +76,7 @@ def tempo(vetor):
 
 
 print('-'*30)
-tempo(vetor1)
+tempo(vetor[0])
 print('-'*30)
-tempo(vetor2)
+tempo(vetor[1])
 
