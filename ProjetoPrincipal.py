@@ -2,7 +2,6 @@ import random
 from insertionsort import insertionsort
 from mergesort import mergesort
 import time
-import numpy as np
 
 n = []
 tamanho_random = random.randint(10, 21)
@@ -71,12 +70,12 @@ def tempo(vetor):
 
     print(f'Tamanho do vetor: {len(vetor)}\n'
     f'Media Insertion Sort: {media}')
-    print('-'*30)
     print(f'Media Merge Sort: {mediab}')
+    print('-'*50)
 
-
-print('-'*30)
+"""print('-'*30)
 tempo(vetor[0])
 print('-'*30)
-tempo(vetor[1])
-
+tempo(vetor[1])"""
+for aux in range(10):
+    tempo(vetor[aux])
