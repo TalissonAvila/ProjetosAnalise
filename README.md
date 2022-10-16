@@ -45,7 +45,7 @@ Tamanho de entrada | Média de tempo de execução do Insertion Sort | Média de
 4724 | 0.09845744479786266 | 0.024554057554765182
 
 ### Para melhorar a visualição, abaixo tem uma foto do gráfico comparando os algoritmos nesses dez tamanhos de entrada:
-![GraficoISxMS](https://raw.githubusercontent.com/TalissonAvila/ProjetosAnalise/grafico/figuraprojeto.png?token=GHSAT0AAAAAABZEJZBZRTONH2GMG6WEGXB4Y2MHGYQ)
+![GraficoISxMS](https://raw.githubusercontent.com/TalissonAvila/ProjetosAnalise/grafico/figuraprojeto.png?token=GHSAT0AAAAAABZEJZBZUBUGNCUXWFR56MNMY2MHNFA)
 
 __Note que, nesse caso, para o valor de entrada sendo 970, a média de tempo do insertion sort é menor mas, para valores, nesse caso, a partir de 2585, o merge sort tem média de tempo inferior, sendo que, para valores cada vez maior, essa diferença de tempo também aumenta.__
 
