@@ -75,7 +75,6 @@ def tempo(vetor):
 
 
 array = []
-dicionario = {}
 for aux in range(10):
    array.append(tempo(vetor[aux]))
 
