@@ -2,6 +2,9 @@ import random
 from insertionsort import insertionsort
 from mergesort import mergesort
 import time
+import pandas as pd
+import matplotlib.pyplot as plt
+
 
 n = []
 tamanho_random = random.randint(10, 21)
@@ -68,14 +71,26 @@ def tempo(vetor):
         media = soma / tamanho_random
         mediab = somab / tamanho_random
 
-    print(f'Tamanho do vetor: {len(vetor)}\n'
-    f'Media Insertion Sort: {media}')
-    print(f'Media Merge Sort: {mediab}')
-    print('-'*50)
+    return [len(vetor), media, mediab]
 
-"""print('-'*30)
-tempo(vetor[0])
-print('-'*30)
-tempo(vetor[1])"""
+
+array = []
 for aux in range(10):
-    tempo(vetor[aux])
+   array.append(tempo(vetor[aux]))
+
+df2 = pd.DataFrame(array, columns=  ['tamanho', 'mediaIS', 'mediaMS'])
+
+with plt.style.context('Solarize_Light2'):
+    colors = ['b', 'r']
+    insort = plt.scatter(df2.tamanho, df2.mediaIS, label='InsertionSort', color=colors[0])
+    mgsort = plt.scatter(df2.tamanho, df2.mediaMS, label='MergeSort', color=colors[1])
+    plt.title('Comparação do tempo de execução do Insertion Sort vs Merge Sort')
+    plt.xlabel('Tamanho de entrada', fontsize=14)
+    plt.ylabel('Tempo de execução μs)', fontsize=14)
+    plt.legend((insort, mgsort),
+               ('Insertion Sort', 'Merge Sort'),
+               scatterpoints=1,
+               loc='upper left',
+               ncol=3,
+               fontsize=8)
+plt.show()
