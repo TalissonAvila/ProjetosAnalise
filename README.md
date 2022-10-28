@@ -29,7 +29,7 @@ O Merge Sort é um dos algoritmos de classificação mais eficientes. Ele tem co
 #### Na animação abaixo mostra como funciona o merge sort:
 ![MergeSort](https://miro.medium.com/max/480/1*mh9np1i9PCF2F-4dSEMKuA.gif)
 
-### Dado os códigos utilizados nesse repositório, utilizando os valores de tamanho a seguir, o Insertion Sort e Merge Sort geram a seguionte média de tempo de execução:
+### Dado os códigos utilizados nesse repositório, utilizando os valores de tamanho a seguir, o Insertion Sort e Merge Sort geram a seguinte média de tempo de execução:
 
 Tamanho de entrada | Média de tempo de execução do Insertion Sort | Média de tempo de execução do Merge Sort
 :----------------: | :------------------------------------------: | :--------------------------------------:
